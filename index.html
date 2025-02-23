@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="imagex/png" sizes="48x48" href="../image/icone.png">
+    <title>Portfólio</title>
+    <link href="../style/style.css" rel="stylesheet">
+    </head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#professional">Profissional</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="sobre">
+            <h1>Amanda de Jesus</h1>
+            <p>Assistente de Sistemas </p>
+        </section>
+
+        <section id="about">
+            <div class="container">
+                    <div class="about-content">
+                    <img src="/image/pessoa1.jpeg" alt="Your Name" class="profile-image">
+                    <div class="about-text">
+                        <p>Olá! Meu nome é Amanda, tenho 27 anos e moro em Criciúma/SC.</p>
+                        <p>Sou uma pessoa dedicada, prática e empática, com uma forte preocupação pelo bem-estar dos outros.</p>
+                        <p>Apaixonada por técnologia, sempre estou em busca de conhecimento e novos desafios, mas sempre acompanhada de um bom café! </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="professional">
+            <div class="container">
+                <h2>Jornada Profissional</h2>
+                <div class="professional-content">
+                    <div class="professional-text">
+                        <p>Durante cinco anos, cursei Enfermagem na UNESC e atuei na linha de frente da pandemia, enfrentando desafios diários com dedicação e resiliência. Com o tempo, migrei para a área administrativa da saúde pública, onde fui responsável por analisar dados sobre o desempenho do município em procedimentos e consultas diárias, administrar softwares do Ministério da Saúde e privados, coordenar equipes e gerenciar estoques e compras de materiais.</p>
+                        <p>No entanto, percebi que não estava plenamente realizada com o que a profissão me oferecia, o que me levou a buscar novas oportunidades. Após uma reflexão profunda, tomei a decisão de iniciar meus estudos na área de Ciência da Computação, uma área que, embora nunca tivesse notado, sempre fez parte da minha vida como amante da tecnologia. Em 2024, consegui meu primeiro emprego como Assistente de TI e atualmente trabalho como Assistente de Sistemas na Unimed.</p>
+                    </div>
+                    <img src="/image/profissional.jpeg" alt="Professional workspace" class="professional-image">
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <div class="container">
+                <h2>Skills & Interesses</h2>
+                <div class="skills-grid">
+                    <div class="skill-item">HTML & CSS</div>
+                    <div class="skill-item">JavaScript</div>
+                    <div class="skill-item">Oracle</div>
+                    <div class="skill-item">PL/SQL</div>
+                    <div class="skill-item">MySQL</div>
+                    <div class="skill-item">IA</div>
+                    <div class="skill-item">Games</div>
+                    <div class="skill-item">Pescaria</div>
+                    <div class="skill-item">Fotografia</div>
+                    <div class="skill-item">Música</div>
+                    <div class="skill-item">Ler</div>
+                    <div class="skill-item">Viagens</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato">
+            <div class="container">
+                <h2>Contato</h2>
+                <div class="contato-info">
+                    <p>Email: amandadavilaj@gmail.com</p>
+                    <p>LinkedIn: linkedin.com/in/amanda-de-jesus</p>
+                    <p>Instagram: @afurlaneto_</p>
+                </div> 
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Amanda de Jesus. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('section');
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>
+
